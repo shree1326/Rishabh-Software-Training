@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int age;
+    printf("Hello I am Shree.\n Enter Your Age : \n" );
+    scanf("%d",&age);
+    if (age>18)
+    {
+        printf("Hi You are in College %d");
+    }
+    else
+    {
+        printf("Hello You are in School");
+    }
+        
+
+    return 0;
+}
