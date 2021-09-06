@@ -1,0 +1,18 @@
+#include <stdio.h>
+struct CollegeData{
+    char *clg_name;
+    int clg_id;
+    int clg_year;
+};
+int main()
+{
+     struct CollegeData College;
+     College.clg_name = "Vadodara Institute Of Engineering";
+     College.clg_id = 80;
+     College.clg_year = 2021;
+
+     printf("College Name is: %s", College.clg_name);
+     printf("\nCollege Id is: %d", College.clg_id);
+     printf("\nCollege Age is: %d", College.clg_year);
+     return 0;
+}
