@@ -1,11 +1,9 @@
-public class stringTutorial
+public class string
 {
   public static void main(String args[])
   {
-    String string1 = "Hello World";
-    // declaring string using string literals
-    String string2 = new String("This is TechVidvan Java Tutorial ");
-    //declaring string using new operator
+    String string1 = "Shreyansi";
+    String string2 = new String("This is Shreyansi Hathi's Java Program ");
     System.out.println(string1);
     System.out.println(string2);
   }
