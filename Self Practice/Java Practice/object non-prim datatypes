@@ -1,5 +1,5 @@
   
-public class Shreyansi
+public class ShreyansiObject
 {
   int age = 21;
   public static void main(String[] args)
