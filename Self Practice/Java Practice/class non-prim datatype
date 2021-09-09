@@ -1,8 +1,0 @@
-  public class MyClass
-  {
-    int x = 5;
-    void display()
-    {
-    // methodBody;
-  }
-}
