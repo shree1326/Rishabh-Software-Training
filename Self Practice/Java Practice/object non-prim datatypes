@@ -1,11 +1,10 @@
-public class Student
+  
+public class Shreyansi
 {
-  int marks = 76;
+  int age = 21;
   public static void main(String[] args)
   {
-    Student student1 = new Student();
-    // creating object of the class by using new operator
-    System.out.println("Marks of student: " +student1.marks);
-    Accessing the property “marks” of the class with the help of an object.
+    Shreyansi shreyansi1 = new Shreyansi();
+    System.out.println("Age of Shreyansi: " +shreyansi1.age);
   }
 }
