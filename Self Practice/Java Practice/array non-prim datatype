@@ -1,13 +1,12 @@
-public class arrayTutorial
+public class array
 {
   public static void main(String args[])
   {
-    int [ ] marksOfStudents = new int[ ] {65, 90, 78, 60, 84 };
-    System.out.println("Marks of first student: " +marksOfStudents[0]);
-    System.out.println("Marks of second student: " +marksOfStudents[1]);
-    System.out.println("Marks of third student: " +marksOfStudents[2]);
-    System.out.println("Marks of fourth student: " +marksOfStudents[3]);
-    System.out.println("Marks of fifth student: " +marksOfStudents[4]);
+    int [ ] AgeOfHathis = new int[ ] {21, 15, 44, 49};
+    System.out.println("Age of Shreyansi: " +AgeOfHathis[0]);
+    System.out.println("Age of Khanak: " +AgeOfHathis[1]);
+    System.out.println("Age of Urvi: " +AgeOfHathis[2]);
+    System.out.println("Age of Kuldip: " +AgeOfHathis[3]);
 
   }
 }
