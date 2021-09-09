@@ -3,9 +3,7 @@ public class Shreyansi {
     public static void main(String[] args) {  
   
         char char1='A';  
-        char char2='B';  
-          
-   
+        char char2='B'; 
         System.out.println("character 1: "+char1);  
         System.out.println("character 2: "+char2);                  
     }         
