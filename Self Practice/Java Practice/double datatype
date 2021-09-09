@@ -2,12 +2,12 @@ public class DoubleDataType
 {
     public static void main(String args[])
     {
-        double myDouble1, myDouble2, result;
-        myDouble1 = 48976.8987;
-        myDouble2 = 29513.7812d;
-        result = myDouble1 + myDouble2;
-        System.out.println("Number 1: " +myDouble1);
-        System.out.println("Number 2: " +myDouble2);
-        System.out.println("Number 1 + Number 2: " +result);
+        double Double1, Double2, answer;
+        Double1 = 1.5;
+        Double2 = 1.5;
+        answer = Double1 + Double2;
+        System.out.println("Number 1: " +Double1);
+        System.out.println("Number 2: " +Double2);
+        System.out.println("Number 1 + Number 2: " +answer);
     }
 }
