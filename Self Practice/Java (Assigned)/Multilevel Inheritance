@@ -1,0 +1,32 @@
+class RishabhSoftwares
+{  
+    void train()
+    {
+        System.out.println("RishabhSoftwares is training.");
+    }  
+}  
+class Shreyansi extends RishabhSoftwares
+{  
+    void trainee()
+    {
+        System.out.println("Shreyansi is a trainee.");
+    }  
+}  
+class Hathi extends Shreyansi
+{  
+    void surname()
+    {
+        System.out.println("Hathi is the surname of Shreyansi.");
+    }  
+}  
+public class Inheritance
+{  
+    public static void main(String args[])
+    {  
+        Hathi s=new Hathi();  
+        s.surname();
+        s.trainee();  
+        s.train();  
+        
+    }
+}
