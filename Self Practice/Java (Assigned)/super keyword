@@ -1,0 +1,21 @@
+class Shreyansi
+{
+	int Fingers = 5;
+}
+class Hand extends Shreyansi
+{
+	int Fingers = 2;
+
+	void display()
+	{
+		System.out.println("Maximum fingers in a hand: " + super.Fingers);
+	}
+}
+public class Palm
+{
+	public static void main(String[] args)
+	{
+    	Hand small = new Hand();
+		small.display();
+	}
+}
