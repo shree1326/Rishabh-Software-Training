@@ -1,0 +1,31 @@
+class RishabhSoftwares
+{  
+    void train()
+    {
+        System.out.println("RishabhSoftwares is training.");
+    }  
+}  
+class Shreyansi extends RishabhSoftwares
+{  
+    void trainee()
+    {
+        System.out.println("Shreyansi is a trainee.");
+    }  
+}  
+class GaganSir extends RishabhSoftwares
+{  
+    void trainer()
+    {
+        System.out.println("GaganSir is the Trainer at Rishabh Softwares");
+    }  
+}  
+public class Inheritance
+{  
+    public static void main(String args[])
+    {  
+        GaganSir s=new GaganSir();  
+        s.trainer();
+        s.train();  
+        
+    }
+}
