@@ -1,0 +1,25 @@
+class B 
+{
+    int a;
+    int b;
+    void show()
+    {
+        System.out.println("Base class");
+    }
+}
+class C extends B
+{
+    void show()
+    {
+        System.out.println("Derived");
+    }
+}
+public class A
+{
+    public static void main(String s[]) 
+    {
+      B b=new C();
+      b.show();
+     
+    }
+}
