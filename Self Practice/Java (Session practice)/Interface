@@ -1,0 +1,17 @@
+interface B
+{  
+    void print();  
+}  
+class C implements B
+{  
+    public void print(){System.out.println("Shreyansi Hathi is Practicing");
+    }  
+}
+public class A
+{
+public static void main(String args[])
+{  
+    C obj = new C();  
+    obj.print();  
+ }  
+}  
