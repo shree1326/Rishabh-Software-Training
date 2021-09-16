@@ -1,0 +1,13 @@
+public class StringCompare
+{ 
+    public static void main(String args[])
+    { 
+        String s1="Shreyansi";
+        String s2="Hathi"; 
+        String s3="Shreyansi"; 
+        String s4="Rishabh Softwares";
+        System.out.println(s1.compareTo(s2)); 
+        System.out.println(s1.compareTo(s3));
+        System.out.println(s1.compareTo(s4)); 
+        }
+} 
