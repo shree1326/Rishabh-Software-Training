@@ -1,0 +1,9 @@
+public class StringConcat
+{
+    public static void main(String args[])
+    {
+        String s1="Shreyansi";
+        s1=s1.concat("Hathi");
+        System.out.println(s1);
+        }
+}
