@@ -1,0 +1,10 @@
+public class StringReplace
+{ 
+    public static void main(String args[])
+    { 
+        String s1="Shreyansi Rathi"; 
+        String replaceString=s1.replace("Rathi","Hathi"); 
+        System.out.println(replaceString); 
+    }
+    
+}
