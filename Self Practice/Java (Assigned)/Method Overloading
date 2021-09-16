@@ -1,0 +1,18 @@
+public class VadodaraInstituteOfEngineering
+{
+    private static void display(int a)
+    {
+        System.out.println("Semester " + a);
+    }
+
+    private static void display(int a, int b)
+    {
+        System.out.println("Semester " + "and" + " " + "Year" + " " +  a + " and " + b);
+    }
+
+    public static void main(String[] args) 
+    {
+        display(7);
+        display(7,4 );
+    }
+}
