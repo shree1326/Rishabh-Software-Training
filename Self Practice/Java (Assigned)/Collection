@@ -1,0 +1,19 @@
+import java.util.*;  
+public class CollectionOfFriends
+{  
+    public static void main(String args[])
+    {  
+        Stack<String> stack = new Stack<String>(); 
+        
+        stack.push("Shreyansi"); 
+        stack.push("Khanak");  
+        stack.push("Urvi");  
+        
+        stack.pop();  
+        Iterator<String> itr=stack.iterator();  
+        while(itr.hasNext())
+        {  
+            System.out.println(itr.next());  
+        }  
+    }  
+}
