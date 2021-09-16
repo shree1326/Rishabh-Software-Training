@@ -1,0 +1,21 @@
+public class Shreyansi
+{  
+  final void draw()
+  {
+      System.out.println("Shreyansi is drawing");
+  }  
+}  
+     
+class Brush extends Shreyansi
+{  
+   void draw()
+   {
+       System.out.println("Shreyansi have 36 Paint Brushes");
+   }  
+     
+   public static void main(String args[])
+   {  
+   Brush brush= new Brush();  
+   brush.draw();  
+   }  
+} 
