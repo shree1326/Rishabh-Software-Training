@@ -1,0 +1,23 @@
+using System; 
+class Shree
+{ 
+    public Shree(int a, double b, string c) 
+    { 
+        Console.WriteLine(a); 
+        Console.WriteLine(b); 
+        Console.WriteLine(c); 
+    }
+    public Shree(int a, int b) 
+        : this(26, 5.3, "Shreyansi") 
+    { 
+        Console.WriteLine(a); 
+        Console.WriteLine(b); 
+    } 
+} 
+public class SKH 
+{ 
+    static public void Main() 
+    { 
+        Shree obj = new Shree(0, 1); 
+    } 
+} 
