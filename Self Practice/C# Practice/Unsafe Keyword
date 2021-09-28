@@ -11,8 +11,8 @@ namespace Unsafe
                 int var = 20;
                 int* p = &var;
 
-                System.Console.WriteLine("Data is: ", var);
-                System.Console.WriteLine("Address is:", (int)p);
+                System.Console.WriteLine("Data is: {0}", var);
+                System.Console.WriteLine("Address is: {0}", (int)p);
                 System.Console.ReadKey();
             }
         }
