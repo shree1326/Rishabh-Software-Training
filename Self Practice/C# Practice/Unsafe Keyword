@@ -1,0 +1,20 @@
+using System;
+
+namespace Unsafe
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            unsafe
+            {
+                int var = 20;
+                int* p = &var;
+
+                System.Console.WriteLine("Data is: ", var);
+                System.Console.WriteLine("Address is:", (int)p);
+                System.Console.ReadKey();
+            }
+        }
+    }
+}
