@@ -1,0 +1,20 @@
+using System;
+namespace Shreyansi
+{
+enum BirthdayMonth
+{
+	jan,
+	feb,
+	mar,
+	apr,
+	may
+}
+
+class Program 
+{
+	static void Main(string[] args)
+	{
+		Console.WriteLine(BirthdayMonth.may);
+	}
+}
+}
