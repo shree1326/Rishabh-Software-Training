@@ -1,0 +1,11 @@
+using System;    
+    public class CopyMethod   
+    {    
+        public static void Main(string[] args)    
+        {    
+             string s1 = "Hi, I'm Shreyansi";    
+             string s2 = string.Copy(s1);  
+             Console.WriteLine(s1);  
+             Console.WriteLine(s2);  
+        }    
+    }    
