@@ -1,0 +1,29 @@
+using System;
+class Shreyansi
+{
+  static void Main() 
+  {
+      // numeric string to int
+      string input1 = "2000";
+      Console.WriteLine("Convert.ToInt32(String to Int): " +Convert.ToInt32(input1));
+      // int to int
+      int input2 = 26;
+      Console.WriteLine("Convert.ToInt32(Int to Int): " +Convert.ToInt32(input2));
+      // boolean to int 
+      bool input3 = true;
+      Console.WriteLine("Convert.ToInt32(boolean to Int): " +Convert.ToInt32(input3));
+      // alphabetic string to Int
+      const string inputString = "Shreyansi"; 
+      if (Int32.TryParse(inputString, out int numValue)) 
+      { 
+          Console.WriteLine(numValue); 
+      } 
+      else 
+      { 
+          Console.WriteLine($"Int32.TryParse could not parse '{inputString}' to an int."); 
+      }
+      // null to int
+      string input4 = null;
+      Console.WriteLine("Convert.ToInt32(Null to Int): " +Convert.ToInt32(input4));
+  }
+}
