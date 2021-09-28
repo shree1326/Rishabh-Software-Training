@@ -1,0 +1,10 @@
+using System;
+class Shreyansi
+{
+  static void Main() 
+  {
+      // string to int
+      string input1 = "2000";
+      Console.WriteLine("int.Parse(String to Int): " +int.Parse(input1));
+  }
+}
