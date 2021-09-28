@@ -1,0 +1,12 @@
+using System;
+
+class Shree 
+{
+	static public void Main()
+	{
+		int ? a = null;
+		int ? b = 1234;
+		Console.WriteLine(a);
+		Console.WriteLine(b);
+	}
+}
