@@ -1,0 +1,24 @@
+using System;
+public class CopyArray  
+{  
+    public static void Main()  
+    {  
+        int [] A1 = new int [] {1, 2, 3, 4, 5};   
+        int [] A2 = new int[A1.Length];   
+        for (int i = 0; i < A1.Length; i++) 
+        {   
+            A2[i] = A1[i];   
+        }     
+        System.Console.WriteLine("Elements of original array: ");  
+        for (int i = 0; i < A1.Length; i++) 
+        {   
+           System.Console.Write(A1[i] + " ");  
+        }   
+        System.Console.WriteLine();  
+        System.Console.WriteLine("Elements of new array: ");  
+        for (int i = 0; i < A2.Length; i++) 
+        {   
+           System.Console.Write(A2[i] + " ");  
+        }   
+    }  
+}  
