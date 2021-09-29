@@ -1,0 +1,23 @@
+using System;
+public class LowercaseUppercase
+{
+    static void Main(string[] args)
+    {
+        char ch;
+        System.Console.WriteLine("Enter any character: ");
+        ch = Convert.ToChar(Console.ReadLine());        
+        if (ch >= 'a' && ch <= 'z')
+        {
+            System.Console.WriteLine("It is lowercase alphabet ");            
+        }
+        else if (ch >= 'A' && ch <= 'Z')
+        {
+            System.Console.WriteLine("It is uppercase alphabet ");                      
+        }
+        else
+        {
+            System.Console.WriteLine("It is not an alphabet ");                      
+        }
+        System.Console.ReadLine();
+    }
+}
