@@ -1,0 +1,20 @@
+using System;
+namespace DefaultConstractor
+{
+    class addition
+    {
+        int a, b;
+        public addition()   
+        {
+            a = 1;
+            b = 2;
+        }
+        public static void Main()
+        {
+            addition obj = new addition(); 
+            System.Console.WriteLine(obj.a);
+            System.Console.WriteLine(obj.b);
+            System.Console.Read();
+        }
+    }
+}
