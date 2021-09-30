@@ -1,0 +1,51 @@
+using System;
+
+namespace Program
+{
+    class Convert2Dto1D
+    {
+        static void Main(string[] args)
+        {
+            int s1, s2, a, b, k = 0;
+            int[] str1 = new int[12];
+            int[,] str2 = new int[12, 12]; 
+
+            System.Console.Write("enter Row and Column :");
+            s1 = int.Parse(Console.ReadLine());
+            s2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("enter in 2D array ");
+
+            for(a=0; a<s1; a++)
+            {
+                for (b = 0; b < s1; b++)
+                {
+                    str2[a, b] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("in 2D array..");
+            for (a = 0; a < s1; a++)
+            {
+                for (b = 0; b < s1; b++)
+                {
+                    Console.WriteLine("a[{0}, {1}] = {2}", a, b, str2[a, b]);
+                }
+            }
+            Console.WriteLine("in 1D array...");
+            for (a = 0; a < s1; a++)
+            {
+                for (b = 0; b < s1; b++)
+                {
+                    str1[k++] = str2[a, b];
+                }
+
+            }
+            for( a = 0; a < s1 * s2; a++)
+            {
+                Console.WriteLine("str[{0}] = {1} \t", a, str1[a]);
+            }
+            Console.ReadLine();
+        }
+    }
+}
