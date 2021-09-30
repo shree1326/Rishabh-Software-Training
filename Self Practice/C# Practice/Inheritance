@@ -1,0 +1,34 @@
+using System;
+class A 
+{
+    public int i;
+    public int j;
+    public void get(int a, int b)
+    {
+        i = a;
+        j = b;
+    }
+}
+class B:A
+{
+    public int k;
+    public void getder(int h)
+    {
+        k = h;
+    }
+    public void showall()
+    {
+        Console.WriteLine(i+""+j+""+k);
+    }
+}
+class Program
+{
+  static void Main() 
+  {
+      B b = new B();
+      b.get(12,15);
+      b.getder(17);
+      b.showall();
+    Console.Read();
+  }
+}
