@@ -1,0 +1,41 @@
+using System;
+class A 
+{
+    public int i;
+    public int j;
+    public A()
+    {
+        i = 0;
+        j = 0;
+    }
+    public A(int a , int b)
+   // public void get(int a, int b)
+    {
+        i = a;
+        j = b;
+    }
+}
+class B:A
+{
+    public int k;
+    public B(int c, int d, int e):base(c,d)
+    //public void getder(int h)
+    {
+        k = e;
+    }
+    public void showall()
+    {
+        Console.WriteLine(i+""+j+""+k);
+    }
+}
+class Program
+{
+  static void Main() 
+  {
+      B b = new B(12,14,16);
+      //b.get(12,15);
+      //b.getder(17);
+      b.showall();
+    Console.Read();
+  }
+}
