@@ -1,0 +1,27 @@
+using System;
+class A 
+{
+   public virtual void show()
+   {
+       Console.WriteLine("Baseline");
+   }
+}
+class B:A
+{
+public override void show()
+{
+    Console.WriteLine("Derived line");
+}
+}
+class Program
+{
+  static void Main() 
+  {
+      A a = new A();
+      B b = new B();
+      A c;
+      c = a;
+      c.show();
+    Console.Read();
+  }
+}
