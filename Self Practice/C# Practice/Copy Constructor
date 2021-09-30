@@ -1,0 +1,32 @@
+using System;
+namespace CopyConstructor
+{
+    class Shree
+    {
+        private string month;
+        private int year;
+        public Shree(Shree s)
+        {
+            month = s.month;
+            year = s.year;
+        }
+        public Shree(string month, int year)
+        {
+            this.month = month;
+            this.year = year;
+        }
+        public string Details
+        {
+            get
+            {
+                return "Month: " + month.ToString() +"\nYear: " + year.ToString();
+            }
+	}
+	public static void Main()
+	{
+		Shree a1 = new Shree("May", 2000);
+		Shree a2 = new Shree(a1);
+		System.Console.WriteLine(a2.Details);
+	}
+}
+}
