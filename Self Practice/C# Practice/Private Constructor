@@ -1,0 +1,23 @@
+using System;
+namespace privateConstructor 
+{
+    public class Shree 
+    {
+        private Shree()
+        {
+	}
+	public static int count_shree;
+	public static int shree_Count()
+	{
+		return ++count_shree;
+	}
+	public static void Main()
+	{
+		Shree.count_shree = 1;
+		Shree.shree_Count();
+		System.Console.WriteLine(Shree.count_shree);
+		Shree.shree_Count();
+		System.Console.WriteLine(Shree.count_shree);
+	}
+}
+}
