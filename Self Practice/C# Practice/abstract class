@@ -1,0 +1,28 @@
+using System;
+abstract class A 
+{
+   abstract public void f();
+       public void f1()
+       {
+        Console.WriteLine("Hello");   
+       }
+}
+class B:A
+{
+    public override void f()
+       {
+        Console.WriteLine("Shree");   
+       }
+}
+class Program
+{
+  static void Main() 
+  {
+      
+      B b = new B();
+      b.f();
+      b.f1();
+    Console.Read();
+  }
+}
+
