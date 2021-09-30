@@ -1,0 +1,14 @@
+using System;
+class Shreyansi 
+{
+  static void Main() 
+  {
+      double num1,num2;
+      System.Console.WriteLine("Enter the First number:");
+       num1 = Double.Parse(Console.ReadLine());
+      System.Console.WriteLine("Enter the Second number:");
+       num2 = Double.Parse(Console.ReadLine());
+      double ans = Math.Pow(num1, num2);
+      Console.WriteLine("Power Key is " + ans);
+  }
+}
