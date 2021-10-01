@@ -1,0 +1,21 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+    
+        int[] arrSource = new int[4];
+        arrSource[0] = 5;
+        arrSource[1] = 9;
+        arrSource[2] = 1;
+        arrSource[3] = 3;
+        
+        int[] arrTarget = new int[4];
+        arrSource.CopyTo(arrTarget, 0);
+        Console.WriteLine("Destination Array");
+        foreach (int value in arrTarget)
+        {
+            Console.WriteLine(value);
+        }
+    }
+}
