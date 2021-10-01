@@ -1,0 +1,16 @@
+using System;
+
+class Shree
+{
+	static public void Main()
+	{
+		int i;
+		Addition(out i);
+		Console.WriteLine("The addition of the value is: {0}", i);
+	}
+	public static void Addition(out int i)
+	{
+		i = 13;
+		i += i;
+	}
+}
