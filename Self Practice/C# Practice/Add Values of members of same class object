@@ -1,0 +1,37 @@
+using System;
+namespace ConsoleApp2
+{
+    class A
+    {
+        public int i, j,c;
+        public A(int a,int b )
+        {
+            i = a;
+            j = b;
+        }
+        public A()
+        {
+        }
+        public void copymet(A a,A b)
+        {          
+           i = a.i + b.i;
+           j = a.j + b.j;   
+        }
+        public void show()
+        {
+            Console.WriteLine(i + "" + j);
+        }  
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A a = new A(10,20);
+            A b = new A(84,37);
+            A c = new A();
+           c.copymet(a, b);
+            c.show();            
+            Console.ReadLine();  
+        }
+    }
+    }
