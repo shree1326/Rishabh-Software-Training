@@ -1,0 +1,23 @@
+using System;
+
+namespace CompoundInterest
+{
+    class Program
+    {
+        static void Main()
+        {
+            double Principal, Rate, No_of_Years, Total_Amount;
+            double Com_Interest;
+            Console.WriteLine("Enter Principal Amount");
+            Principal = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Rate Percentage");
+            Rate = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Number of Years");
+            No_of_Years = double.Parse(Console.ReadLine());
+            Total_Amount = Principal * Math.Pow(1 + Rate / 100, No_of_Years);
+            Com_Interest = Total_Amount - Principal;
+            Console.WriteLine("Compound Interest is {0} & total amount paid to lender {1}", Com_Interest, Total_Amount);
+            Console.ReadLine();
+        }  
+    }
+}
