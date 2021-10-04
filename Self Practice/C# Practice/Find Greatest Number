@@ -1,0 +1,20 @@
+using System;
+class GreatestNumber
+{
+    public static void Main()
+    {
+        int a, b;
+        Console.WriteLine("Enter the Two Numbers : ");
+        a = Convert.ToInt32(Console.ReadLine());
+        b = Convert.ToInt32(Console.ReadLine());
+        if (a > b)
+        {
+            Console.WriteLine ("The Greatest Number is " + a);
+        }
+        else
+        {
+            Console.WriteLine("The Greatest Number is " +b);
+        }
+        Console.ReadLine();
+    }
+}
