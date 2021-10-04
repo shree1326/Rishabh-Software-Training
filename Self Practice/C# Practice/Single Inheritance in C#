@@ -1,0 +1,31 @@
+using System;
+
+namespace SingleInheritance
+{
+    class SingleInheritance
+    {
+        class RishabhSoftware
+        {
+            public void Train()
+            {
+                Console.WriteLine("Rishabh Software Trains");
+            }
+        }
+        class Trainee : RishabhSoftware
+        {
+            public void Learning()
+            {
+                Console.WriteLine("Trainees are Learning");
+            }
+        }
+        static void Main()
+        {
+            RishabhSoftware d = new RishabhSoftware();
+            d.Train();
+            Trainee s = new Trainee();
+            s.Learning();
+            s.Train();
+            Console.ReadKey();
+        }
+    }
+}
