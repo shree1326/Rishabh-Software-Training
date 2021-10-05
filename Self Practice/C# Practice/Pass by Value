@@ -15,8 +15,4 @@ class PassingValByVal
         System.Console.ReadKey();
     }
 }
-/* Output:
-    The value before calling the method: 5
-    The value inside the method: 25
-    The value after calling the method: 5
-*/
+
