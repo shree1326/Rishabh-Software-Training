@@ -1,0 +1,30 @@
+interface Rishabh
+{
+    void Training();
+}
+interface RISE
+{
+    void Learning();
+}
+
+class Shreyansi : Rishabh, RISE
+{
+    public void Training()
+    {
+        System.Console.WriteLine("Shreyansi is Intern");
+    }
+    public void Learning()
+    {
+        System.Console.WriteLine("Shreyansi is Learning");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Shreyansi myShreyansi = new Shreyansi();
+        myShreyansi.Training();
+        myShreyansi.Learning();
+    }
+}
