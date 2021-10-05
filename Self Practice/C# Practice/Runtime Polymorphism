@@ -1,0 +1,46 @@
+using System;
+
+namespace Student
+{
+    class B
+    {
+        
+        public virtual void show()
+        {
+            Console.WriteLine("Base class");
+        }
+    }
+    class C:B
+    {
+    public override void show()
+    {
+            Console.WriteLine("Derived");
+        }
+    }
+    class D : B
+    {
+        public override void show()
+        {
+            Console.WriteLine("Hii");
+        }
+    }
+    public class A
+    {
+    public static void Main()
+        {
+            B a = new B();
+            C c = new C();
+            D d = new D();
+
+            B r;
+
+            r = a;
+            r.show();
+            r = c;
+            r.show();
+            r = d;
+            r.show();
+
+        }
+    }
+}
