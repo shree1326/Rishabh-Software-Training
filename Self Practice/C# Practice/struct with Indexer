@@ -1,0 +1,28 @@
+using System;  
+using System.Collections;  
+struct MyStruct 
+{  
+    public int[] data;  
+    public int this[int index] 
+    {  
+        get {  
+            return data[index];  
+        }  
+        set {  
+            data[index] = value;  
+        }  
+    }  
+}  
+class MyClient 
+{  
+    public static void Main() {  
+        MyStruct ms = new MyStruct();  
+        ms.data = new int[5];  
+        ms[0] = 1;  
+        ms[1] = 2;  
+        ms[2] = 3;  
+        ms[3] = 4;  
+        ms[4] = 5;  
+        Console.WriteLine("{0},{1},{2},{3},{4}", ms[0], ms[1], ms[2], ms[3], ms[4]);  
+    }  
+}  
