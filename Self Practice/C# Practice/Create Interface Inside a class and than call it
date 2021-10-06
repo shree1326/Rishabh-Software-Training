@@ -1,0 +1,32 @@
+using System;
+class Shreyansi 
+{
+    public void Training()
+    {
+        System.Console.WriteLine("Shreyansi is Intern");
+    }
+    public void Learning()
+    {
+        System.Console.WriteLine("Shreyansi is Learning");
+    }
+    interface Rishabh
+    {
+        void Training();
+    }
+    interface RISE
+    {
+        void Learning();
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Shreyansi myShreyansi = new Shreyansi();
+        myShreyansi.Training();
+        myShreyansi.Learning();
+    }
+}
+
