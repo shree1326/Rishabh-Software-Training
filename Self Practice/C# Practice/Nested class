@@ -1,0 +1,25 @@
+using System;
+public class A
+{
+	public void One()
+	{
+		Console.WriteLine("Outer class method");
+	}
+	public class B
+	{
+		public void Two()
+		{
+			Console.WriteLine("Inner class Method");
+		}
+	}
+}
+public class NestedClass
+{
+	static public void Main()
+	{
+		A obj1 = new A();
+		obj1.One();
+		A.B obj2 = new A.B();
+		obj2.Two();
+	}
+}
