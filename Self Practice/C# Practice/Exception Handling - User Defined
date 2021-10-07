@@ -1,0 +1,44 @@
+// --------- user defined exception ---/////
+
+using System;
+namespace Demo
+{
+    class ExternalExam
+    {
+        static void Main(string[] args)
+        {
+            GTUExam temp = new GTUExam();
+            try
+            {
+                temp.showdate();
+            }
+            catch (MarksIsZeroException e)
+            {
+                Console.WriteLine("MarksIsZeroException: {0}", e.Message);
+            }
+            Console.ReadKey();
+        }
+    }
+}
+public class MarksIsZeroException : Exception
+{
+    public MarksIsZeroException(string message) : base(message)
+    {
+    }
+}
+public class GTUExam
+{
+    int Marks = 0;
+    public void showdate()
+    {
+        if (Marks == 0)
+        {
+            throw (new MarksIsZeroException("Zero Marks found"));
+        }
+        else
+        {
+            Console.WriteLine("Marks: {0}", Marks);
+        }
+    }
+
+}
