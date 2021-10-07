@@ -1,0 +1,26 @@
+using System;
+using System.Collections;
+
+class MyClient
+{
+    int x;
+    int y;
+    public static void Main()
+    {
+        try
+        {
+            int x = 0;
+            int y = 100;
+            int z = y / x;
+
+        }
+        catch (ArithmeticException e)
+        {
+            Console.WriteLine("Exception is there");
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Exception is here");
+        }
+    }
+}
