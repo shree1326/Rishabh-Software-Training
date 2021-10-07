@@ -1,0 +1,31 @@
+
+using System;
+
+class MultipleCatch2
+{
+	public static void Main(String[] stArr)
+	{
+		
+		try
+		{
+			int a = 100, b = 10;
+			int total = a + b;
+			
+			try
+			{
+				
+				int[] arr = { 1, 2, 3, 4 };
+				Console.WriteLine("Value =" + arr[5]);
+			}
+			catch (IndexOutOfRangeException exp)
+			{
+				Console.WriteLine("Exception Caught - " + exp);
+			}
+		}
+		catch (IndexOutOfRangeException exp)
+		{
+			Console.WriteLine(exp);
+		}
+
+	}
+}
