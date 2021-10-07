@@ -1,0 +1,23 @@
+using System;
+using System.Collections;
+class MyClient
+{
+    //int x;
+    //int y;
+    public static void Main()
+    {
+        try
+        {
+            throw new ArithmeticException(" Invalid ");//int x = 0;
+            //int y = 100;
+            //int z = y / x;
+
+        }
+        catch (ArithmeticException)
+        {
+            Console.WriteLine("Exception is there");
+        }
+
+    }
+}
+
