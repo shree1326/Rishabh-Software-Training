@@ -1,0 +1,20 @@
+using System;
+namespace Program
+{
+    struct MyStruct
+    {
+        public int x;
+        public int y;
+    }
+    class Shreyansi
+    {
+        public static void Main()
+        {
+            MyStruct ms = new MyStruct();
+            ms.x = 10;
+            ms.y = 12;
+            int sum = ms.x + ms.y;
+            Console.WriteLine("The sum is: {0} ", sum);
+        }
+    }
+}
