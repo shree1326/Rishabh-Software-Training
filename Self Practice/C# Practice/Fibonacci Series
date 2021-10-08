@@ -1,0 +1,25 @@
+using System;
+using System.Collections;
+
+    class Program
+    { 
+        static void Main()
+        {
+        int a = 0, b = 1, c, i, n;
+        Console.WriteLine("Enter n:");
+        n = Int32.Parse(Console.ReadLine());
+            for(i=0;i<n;i++)
+        {
+            if (i <= 1)
+                c = i;
+            else
+            {
+                c = a + b;
+                a = b;
+                b = a;
+            }
+            Console.Write(c + "");
+        }
+        Console.ReadKey();
+        }
+    }
