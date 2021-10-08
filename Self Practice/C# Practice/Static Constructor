@@ -1,0 +1,22 @@
+using System;
+using System.Collections;
+public class A
+{
+    static A()
+    {
+        Console.WriteLine("Static");
+    }
+    public static void B()
+    {
+        Console.WriteLine("B Method");
+    }
+    class Program
+    {
+        static void Main()
+        {
+            A.B();
+            Console.ReadKey();
+
+        }
+    }
+}
