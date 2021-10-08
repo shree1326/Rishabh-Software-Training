@@ -1,0 +1,30 @@
+using System;
+
+namespace CSharpProgram
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, i, f = 0;
+            Console.Write("Enter any Number: ");
+            num = int.Parse(Console.ReadLine());
+
+            for (i = 2; i <= num / 2; i++)
+            {
+                if (num % i == 0)
+                {
+                    Console.Write("No " + num + " is not a Prime Number");
+                    f = 1;
+                    break;
+                }
+            }
+            if (f == 0)
+            {
+                Console.Write("Yes " + num + " is a Prime Number");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
