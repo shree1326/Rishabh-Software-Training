@@ -1,0 +1,21 @@
+using System;
+using System.Collections;
+class A
+{
+    public int a;
+    public int b;
+    public A(int x, int y)
+
+    {
+        a = x;
+        b = y;
+    }
+    static void Main()
+    {
+        A obj = new A(2,4);
+        Console.WriteLine("a"+obj.a);
+        Console.WriteLine("b"+obj.b);
+    }
+
+}
+
