@@ -25,4 +25,15 @@ class Program
     Console.Read();
   }
 }
+//////// //////
+
+using System;
+abstract class A 
+{
+   abstract public void f();
+       public void f1()
+       {
+        Console.WriteLine("Hello");   
+       }
+}
 
