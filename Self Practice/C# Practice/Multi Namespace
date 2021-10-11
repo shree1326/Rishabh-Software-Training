@@ -1,0 +1,45 @@
+using System;
+using t1;
+using t2;
+
+namespace ConsoleApp7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A d1 = new t1.A();
+            B d2 = new t2.B();
+            d1.Shree();
+            d2.Hathi();
+            Console.WriteLine("Hello World!");
+            Console.ReadLine();
+        }
+    }
+}
+
+
+namespace t1
+{
+    public class A
+    {
+        public void Shree()
+        {
+            Console.WriteLine("Hello t1!");
+            Console.ReadLine();
+        }
+    }
+
+}
+
+namespace t2
+{
+    public class B
+    {
+        public void Hathi()
+        {
+            Console.WriteLine("Hello t2!");
+            Console.ReadLine();
+        }
+    }
+}
