@@ -1,0 +1,43 @@
+using System;
+
+namespace Delegate
+{
+
+    public delegate void delMethod(int x, int y);
+    public class A
+    {
+        public void Add(int x, int y)
+        {
+            Console.WriteLine("Add" + (x + y));
+
+        }
+        public void Sub(int x, int y)
+        {
+            Console.WriteLine("Sub" + (x - y));
+        }
+        public void Multipy(int x, int y)
+        {
+            Console.WriteLine("Sub" + (x - y));
+        }
+        public void print()
+        {
+            Console.WriteLine("Hi");
+        }
+    }
+    class program
+    {
+        public static void Main()
+        {
+            A obj = new A();
+            //delMethod del1 = A.Add;
+            delMethod del = new delMethod(obj.Add);
+            del += new delMethod(obj.Sub);
+            del(10, 40);
+            Console.WriteLine();
+            del -= new delMethod(obj.Add);
+            del(20, 10);
+            Console.ReadLine();
+
+        }
+    }
+}
