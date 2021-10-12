@@ -1,0 +1,17 @@
+using System;
+using System.Threading;
+
+namespace Multithread
+{
+    class Program
+    {
+        static void Main()
+        {
+            Thread th = Thread.CurrentThread;
+            th.Name = "MainThread";
+
+            Console.WriteLine("Here is your {0}", th.Name);
+            Console.ReadKey();
+        }
+    }
+}
