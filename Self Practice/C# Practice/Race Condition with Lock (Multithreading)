@@ -1,0 +1,58 @@
+using System;
+using System.Threading;
+namespace threading
+{
+    public class A
+    {
+        public void Method()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Thread.Sleep(new Random().Next(2));
+                Console.Write(" {0},", i);
+            }
+            Console.WriteLine();
+        }
+    }
+    class Program
+    {
+        static void Main()
+        {
+            A t = new A();
+            Thread[] thread = new Thread[3];
+            for (int i = 0; i < 3; i++)
+            {
+                thread[i] = new Thread(new ThreadStart(t.Method)); //Thread 1
+               // thread[i].Name = String.Format("Working Thread: {0}", i);
+            }
+            foreach (Thread x in thread)
+            {
+                x.Start();
+            }
+            Console.ReadKey();
+        }
+    }
+
+
+    ////  LOCK /////
+
+    public class Hathi
+    {
+        public object tLock = new object();
+        public void Calculate()
+        {
+            lock (tLock)
+            {
+                Console.Write(" {0} is Executing", Thread.CurrentThread.Name);
+                for (int i = 0; i < 5; i++)
+                {
+                    Thread.Sleep(new Random().Next(2));
+                    Console.Write(" {0},", i);
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+
+
+}
