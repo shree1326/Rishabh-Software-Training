@@ -1,0 +1,19 @@
+using System;
+using System.Threading;
+namespace threading
+{
+    class Program
+    {
+        static void Main()
+        {
+            Thread t = new Thread(Hathi);
+            t.Start();
+            Console.WriteLine("Thread 01 Running");
+            Console.ReadKey();
+        }
+        static void Hathi()
+        {
+            Console.WriteLine("Running Thread 02");
+        }
+    }
+}
