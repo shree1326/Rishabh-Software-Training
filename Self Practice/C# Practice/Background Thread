@@ -1,0 +1,23 @@
+using System;
+using System.Threading;
+namespace threading
+{
+    class Program
+    {
+        static void Main()
+        {
+            Thread t = new Thread(Hathi);
+            t.Name = "Thread 01";
+            t.IsBackground = false;
+            t.Start();
+            Console.WriteLine("Thread 01 Running");
+            Console.ReadKey();
+        }
+        static void Hathi()
+        {
+            Console.WriteLine("Thread 01 started", Thread.CurrentThread.Name);
+            Thread.Sleep(1000);
+            Console.WriteLine("Thread 01 completed", Thread.CurrentThread.Name);
+        }
+    }
+}
