@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+class Program
+{
+    public static void Main()
+    {
+        List<int> lst = new List<int>();
+        lst.Add(100);
+        lst.Add(200);
+        lst.Add(300);
+        lst.Add(400);
+        foreach (int i in lst)
+        {
+            Console.Write(i + "\n");
+
+        }
+    }
+}
