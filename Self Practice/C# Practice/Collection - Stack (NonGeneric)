@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+class Program
+{
+    public static void Main()
+    {
+        Stack stk = new Stack();
+        stk.Push("cs.net");
+        stk.Push("vb.net");
+        stk.Push("asp.net");
+        stk.Push("sqlserver");
+
+        foreach (object d in stk)
+        {
+            Console.Write(d + "\n");
+
+        }
+    }
+}
