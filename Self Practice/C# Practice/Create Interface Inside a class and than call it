@@ -1,22 +1,27 @@
 using System;
-namespace Program {
+namespace Program
+{
     public class Shreyansi
     {
         public interface Rishabh
         {
-            public void Training();
+            void Training();
         }
     }
     public class Shree : Shreyansi.Rishabh
     {
-        void Shreyansi.Rishabh.Training()
+        public void Training()
         {
             System.Console.WriteLine("Shreyansi is Intern");
         }
     }
-        public class program
+    public class program
+    {
+        public static void Main(string[] args)
         {
-         public static void Main(string[] args)
-          { }
+            Shree a = new Shree();
+            a.Training();
+            Console.ReadKey();
         }
+    }
 }
