@@ -1,0 +1,29 @@
+ public class A
+    {
+        public void a()
+        {
+            Thread t = Thread.CurrentThread;
+            Console.WriteLine(t.Name + " is running");
+        }
+    }
+    public class Program
+    {
+        public static void Main()
+        {
+            A obj = new A();
+            Thread t1 = new Thread(new ThreadStart(obj.a));
+            Thread t2 = new Thread(new ThreadStart(obj.a));
+            Thread t3 = new Thread(new ThreadStart(obj.a));
+            t1.Name = "Thread1";
+            t2.Name = "Thread2";
+            t3.Name = "Thread3";
+            t3.Priority = ThreadPriority.Highest;
+            t2.Priority = ThreadPriority.Normal;
+            t1.Priority = ThreadPriority.Lowest;
+
+            t1.Start();
+            t2.Start();
+            t3.Start();
+            Console.Read();
+        }
+    }
