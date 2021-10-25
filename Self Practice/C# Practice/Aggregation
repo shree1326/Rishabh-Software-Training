@@ -1,0 +1,32 @@
+class A
+    {
+        int a = 30;
+        public A()
+        {}
+        public class B
+        {
+            public int b;
+            public B()
+            {
+                b = 25;
+            }
+            public void print()
+            {
+                A p = new A();
+                Console.WriteLine("Value" + b + " " + p.a);
+            }
+        }
+        public void show()
+        {
+            B q = new B();
+            q.print();
+        }
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                A a = new A();
+                a.show();
+            }
+        }
+    }
