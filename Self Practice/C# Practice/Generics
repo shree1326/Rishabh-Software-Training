@@ -1,0 +1,20 @@
+namespace Constructor
+{
+    class GenericClass<T>
+    {
+        public GenericClass(T msg)
+        {
+            Console.WriteLine(msg);
+        }
+    }
+    class Program
+    {
+        static void Main()
+        {
+            GenericClass<string> a = new GenericClass<string>("This is generic class");
+            GenericClass<int> b = new GenericClass<int>(101);
+            GenericClass<char> c = new GenericClass<char>('I');
+            Console.Read();
+        }
+    }
+}
