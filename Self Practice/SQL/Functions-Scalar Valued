@@ -1,0 +1,16 @@
+---- Step 1 ----
+
+create function fun_JoinEmpColumnInfo  
+(  
+   @EmpContact nchar(15),  
+   @EmpEmail nvarchar(50),  
+   @EmpCity varchar(30)  
+)  
+returns nvarchar(100)  
+as  
+begin return(select @EmpContact+ ' ' +@EmpEmail + ' ' + @EmpCity)  
+end  
+
+---- Step 2 ---
+
+SELECT dbo.fun_JoinEmpColumnInfo(10,100,0.1);
