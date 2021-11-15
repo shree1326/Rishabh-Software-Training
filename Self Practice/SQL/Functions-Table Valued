@@ -1,0 +1,9 @@
+---- Step 1 ----
+
+Create function Fun_EmployeeInformation()      
+returns table       
+as      
+return(select * from worker  )
+
+---- Step 2 ----
+select * from Fun_EmployeeInformation();
