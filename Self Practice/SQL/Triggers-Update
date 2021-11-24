@@ -1,0 +1,13 @@
+----- Triggers Update -----
+
+CREATE TRIGGER updatetrigger ON Abc
+FOR UPDATE 
+NOT FOR REPLICATION 
+AS
+ 
+BEGIN
+  INSERT INTO Xyz
+  SELECT id
+    ,getdate()
+  FROM inserted
+END
