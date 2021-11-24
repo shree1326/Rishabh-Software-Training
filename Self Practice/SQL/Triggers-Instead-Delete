@@ -1,0 +1,10 @@
+----- Triggers Instead/Delete -----
+
+CREATE TRIGGER Deltrig ON Abc
+INSTEAD OF DELETE
+AS
+BEGIN
+  Select 'Sample Instead of trigger' as [Message]
+END
+
+delete from Abc where ID=1;
