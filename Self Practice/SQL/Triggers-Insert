@@ -1,0 +1,52 @@
+
+----- Triggers Insert -----
+
+
+CREATE TABLE Abc
+(  
+ID INT Identity,  
+fname Varchar(100),  
+Sal Decimal (10,2)  
+)  
+
+INSERT INTO Abc VALUES ('Anees',1000);  
+INSERT INTO Abc VALUES ('Rick',1200);  
+INSERT INTO Abc VALUES ('John',1100);  
+INSERT INTO Abc VALUES ('Stephen',1300);  
+INSERT INTO Abc VALUES ('Maria',1400); 
+
+CREATE TABLE Xyz  
+(  
+ID int,  
+fname varchar(100),  
+Sal decimal (10,2),  
+Audit_Action varchar(100),  
+Audit_Timestamp datetime  
+)  
+
+CREATE TRIGGER afterInsert ON [dbo].[Abc]   
+FOR INSERT  
+AS  
+declare @id int;  
+declare @fname varchar(100);  
+declare @sal decimal(10,2);  
+declare @audit_action varchar(100);  
+select @id=i.ID from inserted i;   
+select @fname=i.fName from inserted i;   
+select @sal=i.Sal from inserted i;   
+set @audit_action='Inserted Record -- After Insert Trigger.';  
+  
+insert into Xyz  
+(ID,fName,Sal,Audit_Action,Audit_Timestamp)   
+values(@id,@fname,@sal,@audit_action,getdate());  
+  
+PRINT 'AFTER INSERT trigger fired.'  
+GO  
+
+insert into Abc values('Ravi',1500); 
+
+Select * from Xyz 
+
+insert into Abc values('Shreyansi',10000000); 
+
+select * from Abc ;
