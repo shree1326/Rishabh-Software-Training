@@ -1,0 +1,122 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.locks.ReentrantLock;
+
+//Create Runnable object
+class WORKER implements Runnable
+{
+    //mentioning the types
+    String NAME;
+    ReentrantLock ab;
+    public WORKER(ReentrantLock cd, String n)
+    {
+        //equifying
+        ab=cd;
+        NAME=n;
+    }
+    
+    //to call the run() method
+    public void run()
+    {
+        //boolean condition
+        boolean finish =false;
+        
+        //using while loop
+        while (!finish)
+        {
+            // to get outerlock
+            boolean sol = ab.tryLock();
+            //if lock is free than returns true
+            if(sol)
+            {
+                //applying the nested try catch block
+                try
+                {
+                    Date d = new Date();
+                    SimpleDateFormat xy = new SimpleDateFormat("hh:mm:ss");
+                    System.out.println(NAME+" started working at " + xy.format(d) + "Thread01 outerlock is applied");
+                    //thread will sleep for 1.5 seconds
+                    Thread.sleep(1500);
+
+		            // to get Inner Lock
+		            ab.lock();
+		            //using try and catch block
+                    try
+                    {
+                        d = new Date();
+                        xy = new SimpleDateFormat("hh:mm:ss");
+                         System.out.println(NAME + "completed work at " + xy.format(d) + "Thread01 innerLock is applied");
+                         System.out.println("Lock Hold count – " +ab.getHoldCount());
+                        Thread.sleep(1500);
+                    }
+                    catch(InterruptedException e)
+                    {
+                        e.printStackTrace();
+                    }
+                    
+                    //applying the finally block
+                     finally
+                        {
+                            //releasing inner lock
+                             System.out.println(NAME+"releasing inner lock");
+                            ab.unlock();
+                        }
+                         System.out.println("Lock Hold count - " + ab.getHoldCount());
+                         System.out.println(NAME+"work done");
+                        finish = true;
+                    }
+                    catch(InterruptedException e)
+                    {
+                        e.printStackTrace();
+                    }
+                    finally
+                    {
+                    //releasing outerlock
+                     System.out.println(NAME+ "releasing inner lock");
+                    ab.unlock();
+                    
+                     System.out.println("Lock Hold count - " + ab.getHoldCount());
+                    
+                }
+            }
+            
+            //if lock is not free than use else block
+            else
+            {
+                 System.out.println(NAME+"waiting for Cleaner1 to complete");
+                 //using try and catch block
+                try 
+                {
+                    //thread will sleep for 1 second
+                    Thread.sleep(1000);
+                }
+                catch(InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}
+
+//main class
+public class Main
+{
+    static int MAX_T = 2;
+    public static void main(String[] args)
+    {
+        ReentrantLock a = new ReentrantLock();
+        ExecutorService A = Executors.newFixedThreadPool(MAX_T);
+        Runnable w1 = new WORKER(a, "Cleaner1");
+        Runnable w2 = new WORKER(a, "Cleaner2");
+        Runnable w3 = new WORKER(a, "Polisher1");
+        Runnable w4 = new WORKER(a, "Polisher2");
+        A.execute(w1);
+        A.execute(w2);
+        A.execute(w3);
+        A.execute(w4);
+        A.shutdown();
+    }
+}
